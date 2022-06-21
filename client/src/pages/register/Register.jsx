@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useRef } from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import "./register.scss";
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -27,6 +27,7 @@ export default function Register() {
     } catch (err) {}
   };
   return (
+    
     <div className="register">
       <div className="top">
         <div className="wrapper">
@@ -35,23 +36,23 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          
-          <button className="loginButton"> Sign In</button>
-         
         </div>
       </div>
       <div className="container">
         <h1>Unlimited movies, TV shows, and more.</h1>
         <h2>Watch anywhere. Cancel anytime.</h2>
         <p>
-          Ready to watch? Enter your email to create or restart your membership.
+          Ready to watch? Enter your email to create your account.
         </p>
+      
         {!email ? (
           <div className="input">
             <input type="email" placeholder="email address" ref={emailRef} />
             <button className="registerButton" onClick={handleStart}>
               Get Started
             </button>
+           
+            
           </div>
         ) : (
           <form className="input">
@@ -61,7 +62,18 @@ export default function Register() {
               Start
             </button>
           </form>
-        )}
+        )
+        
+        }
+        <div className="sign">
+        <p>
+          Already a User? Sign In.
+        </p>
+    </div>
+    <Link to="/login">
+      <button className="loginButton"> Sign In</button>
+    </Link>
+   
       </div>
     </div>
   );
