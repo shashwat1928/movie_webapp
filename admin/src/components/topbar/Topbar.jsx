@@ -10,18 +10,11 @@ export default function Topbar() {
           <span className="logo">shashwatadmin</span>
         </div>
         <div className="topRight">
-          <div className="topbarIconContainer">
-            <NotificationsNone />
-            <span className="topIconBadge">2</span>
-          </div>
-          <div className="topbarIconContainer">
-            <Language />
-            <span className="topIconBadge">2</span>
-          </div>
+       
           <div className="topbarIconContainer">
             <Settings />
           </div>
-          <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="topAvatar" />
+          <img src="https://pps.whatsapp.net/v/t61.24694-24/261629731_811097543619973_5144205219536461212_n.jpg?ccb=11-4&oh=01_AVzbTQY-mv14EQNNosEFJyGmhB0zlotrKfQ55LWQKhW_fw&oe=62E94927" alt="" className="topAvatar" />
         </div>
       </div>
     </div>

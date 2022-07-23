@@ -71,6 +71,7 @@ router.get("/", verify, async (req, res) => {
   } else {
     res.status(403).json("You are not allowed to see all users!");
   }
+  
 });
 
 //GET USER STATS

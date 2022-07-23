@@ -19,7 +19,7 @@ export default function Login() {
         <div className="wrapper">
           <img
             className="logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNUIgBND80PyHB0_0abdDC0wk6-XLepy0CZA&usqp=CAU"
             alt=""
           />
         </div>
@@ -41,7 +41,7 @@ export default function Login() {
             Sign In
           </button>
           <span>
-            New to Netflix? <Link to="/register"><b>Sign up now.</b></Link>
+            New to Application? <Link to="/register"><b>Sign up now.</b></Link>
           </span>
           <small>
             This page is protected by Google reCAPTCHA to ensure you're not a

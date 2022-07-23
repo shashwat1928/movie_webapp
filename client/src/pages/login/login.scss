@@ -6,7 +6,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("https://i.insider.com/60819fe2354dde0018c06a66?width=700");
+    url("https://vidooly.com/blog/wp-content/uploads/2021/07/fe.jpg");
   background-size: cover;
   position: relative;
 
@@ -18,7 +18,7 @@
       justify-content: space-between;
 
       .logo {
-        height: 40px;
+        height: 80px;
       }
     }
   }
@@ -33,14 +33,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(10, 10, 10);
 
     form {
       width: 300px;
       height: 300px;
       padding: 30px;
       border-radius: 5px;
-      background-color: var(--main-color);
+      background-color: rgb(128, 210, 161);
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -60,18 +60,19 @@
       button {
         height: 40px;
         border-radius: 5px;
-        background-color: red;
+        background-color: rgb(60, 54, 121);
         color: white;
         border: none;
         font-size: 18px;
         font-weight: 500;
         cursor: pointer;
+        
       }
 
       span {
-        color: lightgray;
+        color: rgb(0, 0, 0);
         b {
-          color: white;
+          color: rgb(241, 25, 25);
         }
       }
     }

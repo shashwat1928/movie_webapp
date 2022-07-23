@@ -8,9 +8,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import UserList from "./pages/userList/UserList";
-import User from "./pages/user/User";
-import NewUser from "./pages/newUser/NewUser";
 import Login from "./pages/login/Login";
 import { AuthContext } from "./context/authContext/AuthContext";
 import { useContext } from "react";
@@ -26,23 +23,16 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         {user && (
           <>
+           <Route path="/login">
+              <Redirect to="/" />
+            </Route>
             <Topbar />
             <div className="container">
               <Sidebar />
               <Route exact path="/">
                 <Home />
-              </Route>
-              <Route path="/users">
-                <UserList />
-              </Route>
-              <Route path="/user/:userId">
-                <User />
-              </Route>
-              <Route path="/newUser">
-                <NewUser />
               </Route>
               <Route path="/movies">
                 <MovieList />
@@ -63,6 +53,16 @@ function App() {
                 <NewList />
               </Route>
             </div>
+          </>
+        )}
+        {!user && (
+          <>
+            <Route path="/login">
+              <Login/>
+            </Route>
+            <Route path= "*"> 
+              <Redirect to= "/login" />
+            </Route>
           </>
         )}
       </Switch>

@@ -6,6 +6,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const movieRoute = require("./routes/movies");
 const listRoute = require("./routes/lists");
+const morgan = require('morgan')
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ mongoose
     console.error(err);
   });
 
+app.use(morgan('short'));
 app.use(express.json());
 
 app.use("/api/auth", authRoute);

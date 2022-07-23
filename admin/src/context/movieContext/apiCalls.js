@@ -14,6 +14,8 @@ import {
 export const getMovies = async (dispatch) => {
   dispatch(getMoviesStart());
   try {
+    console.log(localStorage.getItem("user"));
+    console.log(JSON.parse(localStorage.getItem("user")));
     const res = await axios.get("/movies", {
       headers: {
         token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,

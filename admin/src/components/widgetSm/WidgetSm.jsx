@@ -11,8 +11,7 @@ export default function WidgetSm() {
       try {
         const res = await axios.get("/users?new=true", {
           headers: {
-            token:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYThlMWFmMDNhYWI3ODU2NDhlMzZmZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NTQ3ODMwOSwiZXhwIjoxNjU1OTEwMzA5fQ.PS63KU9HwJO7yozfgGNntMPceoJqgz5oaoymPMExPE8",
+            token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
         });
         setNewUsers(res.data);
@@ -27,8 +26,8 @@ export default function WidgetSm() {
     <div className="widgetSm">
       <span className="widgetSmTitle">New Join Members</span>
       <ul className="widgetSmList">
-        {newUsers.map((user) => (
-          <li className="widgetSmListItem">
+        {newUsers.map((user, key) => (
+          <li key= {key} className="widgetSmListItem">
             <img
               src={
                 user.profilePic ||
